@@ -6,8 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const request_promise_1 = __importDefault(require("request-promise"));
 const nylas_1 = __importDefault(require("nylas"));
-const redirectURI = process.env.REDIRECT_URI ||
-    "https://nylas-customer-example-nodejs.herokuapp.com/login_callback";
+const redirectURI = "https://nylas-scheduler-sdk.herokuapp.com//login_callback";
 const router = express_1.default.Router();
 router.get("/", async (req, res) => {
     const accessToken = req.session["access_token"];
