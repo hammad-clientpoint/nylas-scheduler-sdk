@@ -14,8 +14,8 @@ const path_1 = __importDefault(require("path"));
 const nylas_1 = __importDefault(require("nylas"));
 // Controllers (route handlers)
 const base_1 = __importDefault(require("./controllers/base"));
-const NylasClientID = 'a57kjckvg1wnf83px9ubnobnd';
-const NylasClientSecret = '8z7h7terzeqi4som0mrbwq4f7';
+const NylasClientID = process.env["NYLAS_OAUTH_CLIENT_ID"];
+const NylasClientSecret = process.env["NYLAS_OAUTH_CLIENT_SECRET"];
 if (!NylasClientID || !NylasClientSecret) {
     console.warn(`
     To run this example, pass the NYLAS_OAUTH_CLIENT_ID and NYLAS_OAUTH_CLIENT_SECRET
